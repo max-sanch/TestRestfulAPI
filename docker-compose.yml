@@ -15,7 +15,7 @@ services:
     restart: always
   app:
     build: .
-    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    command: python manage.py runserver 0:8000
     container_name: application
     ports:
     - 8000:8000
